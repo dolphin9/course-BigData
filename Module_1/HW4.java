@@ -23,10 +23,10 @@ public class HW4 {
         
         System.out.print("arr[0] = ");
         while(scan.hasNext()){
-           
-            if (tmp >= (arr.length * useRate)) {
+           arr[tmp]= scan.nextInt();
+            if (++tmp >= (arr.length * useRate)) {
                 System.out.println("==================================================");
-                System.out.println("当前已输入"+tmp+"个数，已将数组长度调整为"+arr.length);
+                System.out.println("当前已输入"+tmp+"个数，已将数组长度调整为"+(int)(arr.length*changeRate));
                 System.out.print("原始数组内元素为：[");
                 for (int js : arr) {
                     System.out.print(js +",");
@@ -44,7 +44,6 @@ public class HW4 {
                 System.out.println("]");
                 System.out.println("==================================================");
             }
-            arr[tmp++]= scan.nextInt();
             System.out.print("arr[" + tmp + "] = ");
             
         }
